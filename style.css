@@ -322,7 +322,7 @@ body {
   font-size: 1rem;
   color: #ffffff;
 }
-.animal-label {
+.healchang-label {
     width: 20%;
     text-align: left;
     height: 2rem;
@@ -336,55 +336,55 @@ body {
 }
 
 
-.animal-explain {
+.healchang-explain {
     font-size: 1.5rem;
 }
-.dinosaur-animal-title {
+.dinosaur-healchang-title {
     color: #3ba363;
 }
-.dinosaur-animal-celeb {
-    color: #3ba363;
-    font-size: 1.2rem;
-}
-.deer-animal-title {
-    color: #3ba363;
-}
-.deer-animal-celeb {
+.dinosaur-healchang-celeb {
     color: #3ba363;
     font-size: 1.2rem;
 }
-.cat-animal-title {
+.deer-healchang-title {
+    color: #3ba363;
+}
+.deer-healchang-celeb {
+    color: #3ba363;
+    font-size: 1.2rem;
+}
+.cat-healchang-title {
     color: #ff6c0a;
 }
-.cat-animal-celeb {
+.cat-healchang-celeb {
     color: #ff6c0a;
     font-size: 1.2rem;
 }
-.dog-animal-title {
+.dog-healchang-title {
     color: #548dd4;
 }
-.dog-animal-celeb {
+.dog-healchang-celeb {
     color: #548dd4;
     font-size: 1.2rem;
 }
-.rabbit-animal-title {
+.rabbit-healchang-title {
     color: #e56995;
 }
-.rabbit-animal-celeb {
+.rabbit-healchang-celeb {
     color: #e56995;
     font-size: 1.2rem;
 }
-.bear-animal-title {
+.bear-healchang-title {
     color: #9b6b43;
 }
-.bear-animal-celeb {
+.bear-healchang-celeb {
     color: #9b6b43;
     font-size: 1.2rem;
 }
-.fox-animal-title {
+.fox-healchang-title {
     color: #31849b;
 }
-.fox-animal-celeb {
+.fox-healchang-celeb {
     color: #31849b;
     font-size: 1.2rem;
 }
