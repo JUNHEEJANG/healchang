@@ -33,7 +33,7 @@
     <meta property="og:description" content="사진으로 보는 인공지능 헬창 테스트, 어느정도의 헬창인지 확인해 보세요. 프로 선수? 헬창? 일반인? 멸치? 인공지능이 보는 나의 헬창정도를 테스트 해보세요!"/>
 	
 	<!-- sns 공유시 이미지 부분 -->
-    <meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fc0eq42%2FbtqCQpiFhFn%2F8KPaOP9q8PXpJFRL7if55K%2Fimg.jpg" />
+    <meta property="og:image" content="https://ibb.co/nrrHcKY" />
     <!-- 파비콘 --> 
 	<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -130,7 +130,7 @@
                 <div class="spinner-border" role="status">
                     <span class="sr-only">Loading...</span>
                 </div>
-                <p class="text-center">AI가 당신의 몸을 분석중입니다.</p>
+                <p class="text-center">AI가 당신의 체형을 분석중입니다.</p>
             </div>
 			
             <p class="result-message"></p>
@@ -314,32 +314,32 @@
 				console.log("여자테스트 switch");
                 switch (prediction[0].className) {
 						  case "w-pro":
-                        resultTitle = "프로선수"
-                        resultExplain = "여자 프로선수 설명"
+                        resultTitle = "헬스계의 신 프로선수"
+                        resultExplain = "어서오십시오.. 대선배님. 누추한 곳 방문해주셔서 감사합니다. 헬창의 레벨을 뛰어넘은 당신은 상위 1% 내의 준 프로 선수이거나 프로선수!!"
                         resultCeleb = "여자 프로선수 닮은 사람"
                         gtag('event', '여자 결과 여자 프로선수', {'event_category': '여자 결과'});
                         break;
                     case "w-hc":
-                        resultTitle = "헬창"
-                        resultExplain = "여자 헬창 설명"
+                        resultTitle = "당신은 헬스 고인물 헬창"
+                        resultExplain = "당신은 헬창입니다. 치열한 노력으로 만든 11자 복근과 팔근육. 운동 지식도 상당할 것 같군요. 운동에 관심을 많이 가지고 꾸준히 하는 모습이 멋집니다."
                         resultCeleb = "여자 헬창 닮은 사람"
                         gtag('event', '여자 결과 여자 헬창', {'event_category': '여자 결과'});
                         break;
                     case "w-hl":
-                        resultTitle = "헬린"
-                        resultExplain = "여자 헬린 설명"
+                        resultTitle = "헬스에 갓 입문한 헬린"
+                        resultExplain = "당신은 헬린이시군요. 무거운 무게를 들면 ‘이러다 장미란 되는거 아니에요?’ 걱정할 수 있는데 그것은 편의점 알바생이 월급봉투 받고 ‘이러다 이건희 되는거 아냐?’ 하는것과 같습니다."
                         resultCeleb = "여자 헬린 닮은 사람"
                         gtag('event', '여자 결과 여자 헬린', {'event_category': '여자 결과'});
                         break;
                     case "w-sk":
-                        resultTitle = "마른몸"
-                        resultExplain = "여자 마른몸 설명"
+                        resultTitle = "슬림한 예쁜 마른몸"
+                        resultExplain = "당신은 슬림한 일반 체형입니다. 전체적으로 밸런스가 좋지만 약간의 근력운동도 필요할 것 같네요."
                         resultCeleb = "마른몸 닮은 사람"
                         gtag('event', '여자 결과 여자 마른몸', {'event_category': '여자 결과'});
                         break;
                     case "w-ow":
-                        resultTitle = "과체중"
-                        resultExplain = "여자 과체중 설명"
+                        resultTitle = "건강 관리가 필요한 과체중"
+                        resultExplain = "당신은 다소 과체중일 수 있습니다. 건강을 위해서 운동을 하는 것을 추천 드립니다. "
                         resultCeleb = "여자 과체중 닮은 사람"
                         gtag('event', '여자 결과 여자 과체중', {'event_category': '여자 결과'});
                         break;
@@ -358,32 +358,32 @@
 				console.log("남자테스트 switch");
                 switch (prediction[0].className) {
                     case "m-pro":
-                        resultTitle = "프로선수"
-                        resultExplain = "남자 프로선수 설명"
+                        resultTitle = "헬스계의 신 프로선수"
+                        resultExplain = "어서오십시오.. 대선배님. 누추한 곳 방문해주셔서 감사합니다. 헬창의 레벨을 뛰어넘은 당신은 상위 1% 내의 준 프로 선수이거나 프로선수!!"
                         resultCeleb = "프로 선수 이름"
                         gtag('event', '남자 결과 남자 프로선수', {'event_category': '남자 결과'});
                         break;
                     case "m-hc":
-                        resultTitle = "헬창"
-                        resultExplain = "남자 헬창 설명"
+                        resultTitle = "당신은 헬스 고인물 헬창"
+                        resultExplain = "근손실이 무서워 눈물을 흘리는 것조차 삼가는 당신은 진정한 헬창. 혹시 썸녀가 ‘오늘 뭐해?’ 라고 하면 ‘등’ 이라고 말하진 않으시나요"
                         resultCeleb = "남자 헬창 선수 이름"
                         gtag('event', '남자 결과 남자 헬창', {'event_category': '남자 결과'});
                         break;
                     case "m-hl":
-                        resultTitle = "헬린"
-                        resultExplain = "남자 헬린 설명"
+                        resultTitle = "헬스에 갓 입문한 헬린"
+                        resultExplain = "열심히는 운동하나 아직은 다소 아쉬운 몸입니다. 사레레 익룡 날개짓 하지마시고 ‘와 이러다 뒤지겠는데?’ 라는 생각이 들때까지 3대 운동 운동하세요."
                         resultCeleb = "남자 헬리니 선수"
                         gtag('event', '남자 결과 남자 헬린', {'event_category': '남자 결과'});
                         break;
                     case "m-mc":
-                        resultTitle = "멸치"
-                        resultExplain = "남자 멸치 설명"
+                        resultTitle = "진한 육수가 우러져 나오는 멸치"
+                        resultExplain = "당신은 진한 육수가 우러져 나올 것 같은 완전한 멸치입니다. 살찌우기 힘드시겠지만 꾸준히 하시다보면 언젠가 몸은 커지긴 개뿔... "
                         resultCeleb = "남자 멸치 내용 추가"
                         gtag('event', '남자 결과 남자 멸치', {'event_category': '남자 결과'});
                         break;
                     case "m-ow":
-                        resultTitle = "과체중"
-                        resultExplain = "남자 과체중 설명"
+                        resultTitle = "건강관리가 필요한 과체중"
+                        resultExplain = "당신은 다소 과체중입니다. 내가 운동하면 이거 다 근육으로 바뀔 거야 하시죠? 지방은 근육으로 전환되지 않습니다. "
                         resultCeleb = "과체중 추가 내용"
                         gtag('event', '남자 결과 남자 과체중', {'event_category': '남자 결과'});
                         break;
@@ -395,10 +395,12 @@
                 }
             }
 			
+			console.log("className" + prediction[0].className);
             var title = "<div class='" + prediction[0].className + "-healchang-title'>" + resultTitle + "</div>"
             var explain = "<div class='healchang-explain pt-2'>" + resultExplain + "</div>"
-            var celeb = "<div class='" + prediction[0].className + "-healchang-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
-			$('.result-message').html(title + explain + celeb);
+            
+			//var celeb = "<div class='" + prediction[0].className + "-healchang-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+			$('.result-message').html(title + explain);
             var barWidth;
 			
             for (let i = 0; i < maxPredictions; i++) {

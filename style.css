@@ -199,92 +199,9 @@ body {
 .bar-container {
   height: 2.7rem;
 }
-.dinosaur-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  background-color: rgba(117, 204, 84, 0.2);
-}
-.dinosaur-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  background-color: rgba(117, 204, 84, 1);
-}
-.deer-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  background-color: rgba(117, 204, 84, 0.2);
-}
-.deer-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  background-color: rgba(117, 204, 84, 1);
-}
-.dog-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  background-color: rgba(27, 175, 234, 0.2);
-}
-.dog-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  background-color: rgba(27, 175, 234, 1);
-}
-.cat-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  background-color: rgba(251, 176, 59, 0.2);
-}
-.cat-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  background-color: rgba(251, 176, 59, 1);
-}
-.bear-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  background-color: rgba(195, 140, 102, 0.2);
-}
-.bear-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2rem;
-  border-radius: 10px;
-  background-color: rgba(195, 140, 102, 1);
-}
-.fox-box {
+
+/* 바 부분 디자인 */
+.m-pro-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -293,7 +210,7 @@ body {
   width: 100%;
   background-color: rgba(49, 132, 155, 0.2);
 }
-.fox-bar {
+.m-pro-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -301,7 +218,131 @@ body {
   border-radius: 10px;
   background-color: rgba(49, 132, 155, 1);
 }
-.rabbit-box {
+
+.m-hc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.m-hc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+
+.m-hl-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+
+.m-hl-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+
+.m-mc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(251, 176, 59, 0.2);
+}
+.m-mc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(251, 176, 59, 1);
+}
+.m-ow-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(195, 140, 102, 0.2);
+}
+.m-ow-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(195, 140, 102, 1);
+}
+.w-pro-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(49, 132, 155, 0.2);
+}
+.w-pro-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(49, 132, 155, 1);
+}
+.w-hc-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.w-hc-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.w-hl-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+
+.w-hl-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+.w-sk-box {
   position: absolute;
   top: 0;
   left: 0;
@@ -310,7 +351,7 @@ body {
   width: 100%;
   background-color: rgba(235, 166, 190, 0.2);
 }
-.rabbit-bar {
+.w-sk-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -318,6 +359,25 @@ body {
   border-radius: 10px;
   background-color: rgba(235, 166, 190, 1);
 }
+.w-ow-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(195, 140, 102, 0.2);
+}
+.w-ow-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(195, 140, 102, 1);
+}
+
+
 .percent-text {
   font-size: 1rem;
   color: #ffffff;
@@ -339,55 +399,78 @@ body {
 .healchang-explain {
     font-size: 1.5rem;
 }
-.dinosaur-healchang-title {
+.m-pro-healchang-title {
     color: #3ba363;
 }
-.dinosaur-healchang-celeb {
-    color: #3ba363;
-    font-size: 1.2rem;
-}
-.deer-healchang-title {
-    color: #3ba363;
-}
-.deer-healchang-celeb {
+.m-pro-healchang-celeb {
     color: #3ba363;
     font-size: 1.2rem;
 }
-.cat-healchang-title {
+.m-hc-healchang-title {
+    color: #3ba363;
+}
+.m-hc-healchang-celeb {
+    color: #3ba363;
+    font-size: 1.2rem;
+}
+.m-hl-healchang-title {
     color: #ff6c0a;
 }
-.cat-healchang-celeb {
+.m-hl-healchang-celeb {
     color: #ff6c0a;
     font-size: 1.2rem;
 }
-.dog-healchang-title {
+.m-mc-healchang-title {
     color: #548dd4;
 }
-.dog-healchang-celeb {
+.m-mc-healchang-celeb {
     color: #548dd4;
     font-size: 1.2rem;
 }
-.rabbit-healchang-title {
+.m-ow-healchang-title {
     color: #e56995;
 }
-.rabbit-healchang-celeb {
+.m-ow-healchang-celeb {
     color: #e56995;
     font-size: 1.2rem;
 }
-.bear-healchang-title {
+.w-pro-healchang-title {
     color: #9b6b43;
 }
-.bear-healchang-celeb {
+.w-pro-healchang-celeb {
     color: #9b6b43;
     font-size: 1.2rem;
 }
-.fox-healchang-title {
+.w-hc-healchang-title {
     color: #31849b;
 }
-.fox-healchang-celeb {
+.w-hc-healchang-celeb {
     color: #31849b;
     font-size: 1.2rem;
 }
+.w-hl-healchang-title {
+    color: #31849b;
+}
+.w-hl-healchang-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.w-sk-healchang-title {
+    color: #31849b;
+}
+.w-sk-healchang-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+.w-ow-healchang-title {
+    color: #31849b;
+}
+.w-ow-healchang-celeb {
+    color: #31849b;
+    font-size: 1.2rem;
+}
+
+
 
 /* gender */
 input#gender {
