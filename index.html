@@ -38,16 +38,16 @@
 	<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"></script>
-    
-    <script>
-        window.dataLayer = window.dataLayer || [];
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165875019-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'UA-165875019-1');
+</script>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-145482737-6');
-    </script>
     
 </head>
 
@@ -279,8 +279,6 @@
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
             
-			console.log(modelURL);
-			console.log(metadataURL);
 			model = await tmImage.load(modelURL, metadataURL);
             maxPredictions = model.getTotalClasses();
             
@@ -312,8 +310,14 @@
                 });
 				
 				console.log("여자테스트 switch");
+				/*현재 predictionp[0].className에서 pro 데이터만 넘어 오고 있는 상황.. 또는 데이터가 안넘어 올수도.. */
                 switch (prediction[0].className) {
-						  case "w-pro":
+					for (var j = 0; j < 5; j++) {
+						console.log(prediction[j].className);
+					}
+						
+						
+					case "w-pro":
                         resultTitle = "헬스계의 신 프로선수"
                         resultExplain = "어서오십시오.. 대선배님. 누추한 곳 방문해주셔서 감사합니다. 헬창의 레벨을 뛰어넘은 당신은 상위 1% 내의 준 프로 선수이거나 프로선수!!"
                         resultCeleb = "여자 프로선수 닮은 사람"
@@ -442,7 +446,7 @@
 						labelTitle = "헬린" 
 						break;
                     case "w-sk": 
-						labelTitle = "마른몸" 
+						labelTitle = "슬림" 
 						break;
                     case "w-ow": 
 						labelTitle = "과체중" 
