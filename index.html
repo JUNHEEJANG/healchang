@@ -34,6 +34,7 @@
 	
 	<!-- sns 공유시 이미지 부분 -->
     <meta property="og:image" content="img/healchang_cover_img" />
+	
     <!-- 파비콘 --> 
 	<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -46,7 +47,7 @@
   		function gtag(){dataLayer.push(arguments);}
   		gtag('js', new Date());
   		gtag('config', 'UA-165875019-1');
-</script>
+	</script>
 
     
 </head>
@@ -177,7 +178,7 @@
         </div>
     </footer>
 	
-	<!------------------------- scrtip ----------------------------------->
+	<!------------------------- scritp ----------------------------------->
     <script>
         function gaReload() {
             gtag('event', '다른 사진으로 재시도', {
@@ -208,25 +209,24 @@
 	
     <script>
 		/*HTML을 통해 이미지를 가져오는 부분*/
-		console.log("이미지 가져오는 script");
         function readURL(input) {
+			console.log("업로드 된 이미지 가져오기");
             if (input.files && input.files[0]) {
                 var reader = new FileReader();
-				console.log("이미지 가져오는 script s내부");
+				
                 reader.onload = function(e) {
                     $('.image-upload-wrap').hide();
                     $('#loading').show();
                     $('.file-upload-image').attr('src', e.target.result);
                     $('.file-upload-content').show();
                     $('.image-title').html(input.files[0].name);
-					
                 };
                 reader.readAsDataURL(input.files[0]);
-                console.log("before init");
+                
 				
 				/*텐서플로우 init and preidct 진행*/
 				init().then(function() {
-                    console.log("init and preidct");
+                    console.log("AI 시작(init) 및 예측(predict) 시작");
                     predict();
                     $('#loading').hide();
                 });
@@ -234,8 +234,9 @@
                 removeUpload();
             }
         }
-
+		
         function removeUpload() {
+			console.log("이미지 업로드 후 화면 전환");
             $('.file-upload-input').replaceWith($('.file-upload-input').clone());
             $('.file-upload-content').hide();
             $('.image-upload-wrap').show();
@@ -251,29 +252,25 @@
 	<!--google teachable machine 수행 부분 -->
     <script type="text/javascript">
         /* 남자 여자 모델을 각각 학습 시켜주고 urlMale, urlFemale에 할당 */
-		console.log("성별 할당, init() sciprt");
+		
 		let URL;
         const urlMale = "https://teachablemachine.withgoogle.com/models/QtGQoNTEx/";
         const urlFemale = "https://teachablemachine.withgoogle.com/models/OjYSGKfke/";
-        let model, webcam, labelContainer, maxPredictions;
-		
-
-		console.log(document.getElementById("gender").checked);
+        let model, labelContainer, maxPredictions;
 		
 		/* gender 토글부분을 체크해서 남자면 URL을 남자 학습모델로, 여자면 URL을 여자 학습 모델로 변경 */
 		/* 남자 체크시 false 여자 체크시 true */
-        
-		console.log("init 함수 선언 윗부분");
+		
 		async function init() {
-			console.log("inside 성별선택 윗부분");
+			console.log("init 실행!!");
             if (document.getElementById("gender").checked) {
                 URL = urlFemale;
-				console.log("여자");
-				console.log(urlFemale);
+				console.log("현재 체크된 성별 : " + document.getElementById("gender").checked);
+				console.log("여자 : " + urlFemale);
             } else {
                 URL = urlMale;
-				console.log(urlMale);
-				console.log("남자");
+				console.log("현재 체크된 성별 : " + document.getElementById("gender").checked);
+				console.log("남자 : " + urlMale);
             }
 			
             const modelURL = URL + "model.json";
@@ -284,39 +281,37 @@
             
 			labelContainer = document.getElementById("label-container");
             for (let i = 0; i < maxPredictions; i++) {
-				console.log(i);
 				/*5번 div를 만들어서 d-flex 라는 클래스를 추가, 그리고 element라는 차일드 클래스 추가*/
                 var element = document.createElement("div")
                 element.classList.add("d-flex");
                 labelContainer.appendChild(element);
             }
+			console.log("init 완료!!");
         }
 		
-		console.log("predict 함수 선언 윗부분");
+		
         async function predict() {
+			console.log("predict 함수 실행!!");
             var image = document.getElementById("body-image")
-            const prediction = await model.predict(image, false);
             
-			/* 소팅하는 부분*/
-			/*prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
-            console.log(prediction[0].className);*/
-            
+			// 사진에 대해 분류별 확률 값 받아오기
+			const prediction = await model.predict(image, false);
+			console.log("예측 값 받아오기 및 값별 확률 출력 \n");
+			for (var j = 0; j < maxPredictions; j++){
+				console.log(prediction[j].className + "확률 : " + prediction[j].probability + "\n");
+			}
+			
+			// 높은 확률 별로 소팅
+			prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+			console.log("선택된 가장 높은 확률은? : " + prediction[0].className);
 			
 			var resultTitle, resultExplain, resultCeleb;
+			
             if (document.getElementById("gender").checked) {
-                gtag('event', '헬창 테스트 수행', {
-                     'event_category': '헬창 테스트 수행',
-                     'event_label': '여자'
-                });
-				
+                gtag('event', '헬창 테스트 수행', {'event_category': '헬창 테스트 수행','event_label': '여자'});
 				console.log("여자테스트 switch");
-				/*현재 predictionp[0].className에서 pro 데이터만 넘어 오고 있는 상황.. 또는 데이터가 안넘어 올수도.. */
-                switch (prediction[0].className) {
-					for (var j = 0; j < 5; j++) {
-						console.log(prediction[j].className);
-					}
-						
-						
+                
+				switch (prediction[0].className) {
 					case "w-pro":
                         resultTitle = "헬스계의 신 프로선수"
                         resultExplain = "어서오십시오.. 대선배님. 누추한 곳 방문해주셔서 감사합니다. 헬창의 레벨을 뛰어넘은 당신은 상위 1% 내의 준 프로 선수이거나 프로선수!!"
@@ -337,7 +332,7 @@
                         break;
                     case "w-sk":
                         resultTitle = "슬림한 예쁜 마른몸"
-                        resultExplain = "당신은 슬림한 일반 체형입니다. 전체적으로 밸런스가 좋지만 약간의 근력운동도 필요할 것 같네요."
+                        resultExplain = "당신은 슬림한 일반 체형입니다. 옷핏이 아주 잘 나오는 체형입니다. 전체적으로 밸런스가 좋지만 약간의 근력운동도 필요할 것 같네요."
                         resultCeleb = "마른몸 닮은 사람"
                         gtag('event', '여자 결과 여자 마른몸', {'event_category': '여자 결과'});
                         break;
@@ -352,15 +347,11 @@
                         resultExplain = ""
                         resultCeleb = ""
                         gtag('event', '여자 결과 알수없음', {'event_category': '여자 결과'});
-                  
                 }
-            } else {
-                gtag('event', '헬창 테스트 수행', {
-                    'event_category': '헬창 테스트 수행',
-                    'event_label': '남자'
-                });
+            } else { gtag('event', '헬창 테스트 수행', {'event_category': '헬창 테스트 수행','event_label': '남자'});
 				console.log("남자테스트 switch");
-                switch (prediction[0].className) {
+                
+					switch (prediction[0].className) {
                     case "m-pro":
                         resultTitle = "헬스계의 신 프로선수"
                         resultExplain = "어서오십시오.. 대선배님. 누추한 곳 방문해주셔서 감사합니다. 헬창의 레벨을 뛰어넘은 당신은 상위 1% 내의 준 프로 선수이거나 프로선수!!"
@@ -399,14 +390,18 @@
                 }
             }
 			
-			console.log("className" + prediction[0].className);
+			console.log("switch 종료!!");
+			
+			//결과 내용 출력 부분
             var title = "<div class='" + prediction[0].className + "-healchang-title'>" + resultTitle + "</div>"
             var explain = "<div class='healchang-explain pt-2'>" + resultExplain + "</div>"
-            
 			//var celeb = "<div class='" + prediction[0].className + "-healchang-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
-			$('.result-message').html(title + explain);
-            var barWidth;
 			
+			$('.result-message').html(title + explain);
+            
+			//확률 바 결과 부분 출력 부분
+			var barWidth;
+			console.log("확률 바 결과 부분 출력!!");
             for (let i = 0; i < maxPredictions; i++) {
                 if (prediction[i].probability.toFixed(2) > 0.1) {
                     barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
@@ -416,9 +411,6 @@
                     barWidth = "2%"
                 }
                 var labelTitle;
-				
-				console.log("예측 클래스네임")
-				console.log(prediction[i].className);
 				
                 switch (prediction[i].className) {
                     case "m-pro": 
@@ -455,9 +447,9 @@
                         labelTitle = "알수없음"
                 }
 				
-				
-                var label = "<div class='healchang-label d-flex align-items-center'>" + labelTitle + "</div>"
-                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+			
+                var label = "<div class='healchang-label d-flex align-items-center'>" + labelTitle + "</div>"    
+				var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
                 labelContainer.childNodes[i].innerHTML = label + bar;
             }
         }
