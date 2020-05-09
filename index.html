@@ -36,8 +36,8 @@
     <meta property="og:image" content="img/healchang_cover_img" />
 	
     <!-- 파비콘 --> 
-	<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/ht_favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/ht_favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e64b3727e862b06"></script>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -395,7 +395,7 @@
 			//결과 내용 출력 부분
             var title = "<div class='" + prediction[0].className + "-healchang-title'>" + resultTitle + "</div>"
             var explain = "<div class='healchang-explain pt-2'>" + resultExplain + "</div>"
-			//var celeb = "<div class='" + prediction[0].className + "-healchang-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+			var celeb = "<div class='" + prediction[0].className + "-healchang-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
 			
 			$('.result-message').html(title + explain);
             
