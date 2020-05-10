@@ -4,12 +4,18 @@ body {
   box-sizing: border-box;
   color: #35465d;
 }
+
+ @font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; } 
+
+
 .file-upload {
     padding: 15% 3%;
     margin: 0 auto;
     border-radius: 10px;
     border: solid 1.5px #f6f7fa;
     background-color: #f6f7fa;
+	padding-top: 70px;
+    padding-bottom: 70px;
 }
 .file-upload-btn {
   width: 100%;
@@ -134,13 +140,15 @@ body {
     margin-top: 20px;
 }
 
-.title {
+.title { 
+  font-family: 'Recipekorea';
   line-height: 1.67;
   text-align: center;
-  color: #35465d;
+  color: #fb7d79;
 }
 
 .subtitle {
+  font-family: 'Recipekorea';
   line-height: 1.53;
   text-align: center;
   color: #35465d;
@@ -152,7 +160,7 @@ body {
     font-size: 10px;
   }
     .navbar-brand {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -208,7 +216,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(49, 132, 155, 0.2);
+  background-color: rgb(215, 212, 219);
 }
 .m-pro-bar {
   position: absolute;
@@ -216,7 +224,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(49, 132, 155, 1);
+  background-color: rgb(53, 40, 74);
 }
 
 .m-hc-box {
@@ -226,7 +234,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(117, 204, 84, 0.2);
+  background-color: rgb(230, 226, 233);
 }
 .m-hc-bar {
   position: absolute;
@@ -234,7 +242,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(117, 204, 84, 1);
+  background-color: rgb(129, 111, 144);
 }
 
 .m-hl-box {
@@ -244,7 +252,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(27, 175, 234, 0.2);
+  background-color: rgb(253, 229, 228);
 }
 
 .m-hl-bar {
@@ -253,7 +261,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(27, 175, 234, 1);
+  background-color: rgb(251, 125, 121);
 }
 
 .m-mc-box {
@@ -263,7 +271,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(251, 176, 59, 0.2);
+  background-color: rgb(254, 235, 229);
 }
 .m-mc-bar {
   position: absolute;
@@ -271,7 +279,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(251, 176, 59, 1);
+  background-color: rgb(251, 157, 126);
 }
 .m-ow-box {
   position: absolute;
@@ -280,7 +288,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(195, 140, 102, 0.2);
+  background-color: rgb(254, 245, 236);
 }
 .m-ow-bar {
   position: absolute;
@@ -288,7 +296,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(195, 140, 102, 1);
+  background-color: rgb(248, 205, 158);
 }
 .w-pro-box {
   position: absolute;
@@ -297,7 +305,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(49, 132, 155, 0.2);
+  background-color: rgb(214, 245, 248);
 }
 .w-pro-bar {
   position: absolute;
@@ -305,7 +313,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(49, 132, 155, 1);
+  background-color: rgb(50, 206, 219);
 }
 .w-hc-box {
   position: absolute;
@@ -314,7 +322,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(117, 204, 84, 0.2);
+  background-color: rgb(237, 248, 231);
 }
 .w-hc-bar {
   position: absolute;
@@ -322,7 +330,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(117, 204, 84, 1);
+  background-color: rgb(167, 218, 133);
 }
 .w-hl-box {
   position: absolute;
@@ -331,7 +339,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(27, 175, 234, 0.2);
+  background-color: rgb(253, 238, 231);
 }
 
 .w-hl-bar {
@@ -340,7 +348,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(27, 175, 234, 1);
+  background-color: rgb(243, 169, 134);
 }
 .w-sk-box {
   position: absolute;
@@ -349,7 +357,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(235, 166, 190, 0.2);
+  background-color: rgb(253, 234, 242);
 }
 .w-sk-bar {
   position: absolute;
@@ -357,7 +365,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(235, 166, 190, 1);
+  background-color: rgb(243, 149, 192);
 }
 .w-ow-box {
   position: absolute;
@@ -366,7 +374,7 @@ body {
   height: 2rem;
   border-radius: 10px;
   width: 100%;
-  background-color: rgba(195, 140, 102, 0.2);
+  background-color: rgb(226, 248, 240);
 }
 .w-ow-bar {
   position: absolute;
@@ -374,7 +382,7 @@ body {
   left: 0;
   height: 2rem;
   border-radius: 10px;
-  background-color: rgba(195, 140, 102, 1);
+  background-color: rgb(110, 218, 179);
 }
 
 
@@ -397,76 +405,76 @@ body {
 
 
 .healchang-explain {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 .m-pro-healchang-title {
-    color: #3ba363;
+    color: #35284a;
 }
 .m-pro-healchang-celeb {
-    color: #3ba363;
+    color: #35284a;
     font-size: 1.2rem;
 }
 .m-hc-healchang-title {
-    color: #3ba363;
+    color: #816f90;
 }
 .m-hc-healchang-celeb {
-    color: #3ba363;
+    color: #816f90;
     font-size: 1.2rem;
 }
 .m-hl-healchang-title {
-    color: #ff6c0a;
+    color: #fb7d79;
 }
 .m-hl-healchang-celeb {
-    color: #ff6c0a;
+    color: #fb7d79;
     font-size: 1.2rem;
 }
 .m-mc-healchang-title {
-    color: #548dd4;
+    color: #fb9d7e;
 }
 .m-mc-healchang-celeb {
-    color: #548dd4;
+    color: #fb9d7e;
     font-size: 1.2rem;
 }
 .m-ow-healchang-title {
-    color: #e56995;
+    color: #f8cd9e;
 }
 .m-ow-healchang-celeb {
-    color: #e56995;
+    color: #f8cd9e;
     font-size: 1.2rem;
 }
 .w-pro-healchang-title {
-    color: #9b6b43;
+    color: #32cedb;
 }
 .w-pro-healchang-celeb {
-    color: #9b6b43;
+    color: #32cedb;
     font-size: 1.2rem;
 }
 .w-hc-healchang-title {
-    color: #31849b;
+    color: #a7da85;
 }
 .w-hc-healchang-celeb {
-    color: #31849b;
+    color: #a7da85;
     font-size: 1.2rem;
 }
 .w-hl-healchang-title {
-    color: #31849b;
+    color: #f3a986;
 }
 .w-hl-healchang-celeb {
-    color: #31849b;
+    color: #f3a986;
     font-size: 1.2rem;
 }
 .w-sk-healchang-title {
-    color: #31849b;
+    color: #f395c0;
 }
 .w-sk-healchang-celeb {
-    color: #31849b;
+    color: #f395c0;
     font-size: 1.2rem;
 }
 .w-ow-healchang-title {
-    color: #31849b;
+    color: #6edab3;
 }
 .w-ow-healchang-celeb {
-    color: #31849b;
+    color: #6edab3;
     font-size: 1.2rem;
 }
 
@@ -499,30 +507,6 @@ label {
   background-color: #e2ecf4;
   transition: 0.3s;
 }
-
-
-/* 십자가 세로부분 background-color 진한핑크->진한파랑*/
-/*
-.knob > i {
-  position: absolute;
-  width: 4px;
-  height: 18px;
-  top: 100%;
-  background-color: #a1c6dd;
-  left: calc(50% - 2px);
-}*/
-
-/* 십자가 가로 부분 background-color 진한핑크->진한파랑*/
-/*
-.knob > i:before,
-.knob > i:after {
-  width: 6px;
-  position: absolute;
-  top: 42%;
-  content: "";
-  height: 4px;
-  background-color: #a1c6dd;
-}*/
 
 .knob > i:before {
   left: 4px;
